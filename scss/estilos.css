@@ -1,0 +1,568 @@
+/**-----------------------Generales-------------------------------------------------------------**/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond&family=Lora:ital,wght@0,500;1,400&family=Mochiy+Pop+P+One&family=Montserrat:wght@200&family=Oswald:wght@200;300;400;500;600;700&family=Quicksand&family=Roboto:wght@100&family=Source+Sans+Pro&display=swap");
+.color-principal {
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #363736;
+}
+
+/**-----------------------Header-------------------------------------------------------------**/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#032C55), to(black));
+  background-image: linear-gradient(#032C55, black);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (max-width: 600px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+.header img {
+  height: 70px;
+  padding-left: 20px;
+}
+
+.header .titulo, .header a {
+  font-family: "Oswald", sans-serif;
+}
+
+.header a {
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.header a:hover {
+  color: blue;
+}
+
+.header nav {
+  padding-right: 20px;
+}
+
+/**-----------------------Index.html-----------------------------------------------------------
+
+----------------------------------------------------------------------------------------------**/
+.contenedorPortada {
+  height: 500px;
+  width: 100%;
+  background-image: url(../imagenes/portada.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .contenedorPortada {
+    background-image: url(../imagenes/portadaMobile.jpg);
+    height: 200px;
+    background-size: contain;
+  }
+}
+
+.contenedorEstrenos {
+  height: 120px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#032C55), to(black));
+  background-image: linear-gradient(#032C55, black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contenedorEstrenos h2 {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  padding-left: 10px;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .contenedorEstrenos h2 {
+    text-align: center;
+  }
+}
+
+.galeria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .galeria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.galeria .galeria__imagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.galeria .galeria__imagen img {
+  height: 400px;
+  width: 100%;
+}
+
+.galeria .galeria__imagen p {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.contenedorInferior {
+  height: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0f1216), to(#1f1c1c));
+  background-image: linear-gradient(#0f1216, #1f1c1c);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (max-width: 780px) {
+  .contenedorInferior {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.contenedorInferior a {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 4px;
+  background-color: #0e2c4b;
+  border-radius: .5rem;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.contenedorInferior a:hover {
+  background-color: #133c64;
+}
+
+.imagenesInferiores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .imagenesInferiores {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.imagenesInferiores img {
+  height: 300px;
+  width: 80%;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .imagenesInferiores img {
+    height: 150px;
+    width: 100%;
+  }
+}
+
+.imagenesInferiores p {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .imagenesInferiores p {
+    font-size: 1.2rem;
+  }
+}
+
+.imagenesInferiores .mensaje {
+  color: white;
+  font-family: 'oswald';
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .linea {
+    height: 1px;
+    width: 100%;
+    background-color: #032C55;
+  }
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 16px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0f1216), to(#1f1c1c));
+  background-image: linear-gradient(#0f1216, #1f1c1c);
+}
+
+@media all and (max-width: 600px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer a {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.footer a:hover {
+  color: blue;
+}
+
+.iconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/**-----------------------Cartelera.html-----------------------------------------------------------
+
+----------------------------------------------------------------------------------------------**/
+.contenidoPrincipal__cartelera .tituloCartelera {
+  height: 100px;
+  margin-top: 50px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#032C55), to(black));
+  background-image: linear-gradient(#032C55, black);
+  margin-bottom: 50px;
+}
+
+.contenidoPrincipal__cartelera .tituloCartelera h1 {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.contenidoPrincipal__cartelera .peliculaUno {
+  text-align: center;
+}
+
+.contenidoPrincipal__cartelera .peliculaUno h2 {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 30px;
+  background-color: #0A233D;
+}
+
+.contenidoPrincipal__cartelera .peliculaUno img {
+  margin-top: 20px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.contenidoPrincipal__cartelera .peliculaUno p {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.contenidoPrincipal__cartelera .peliculaUno__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0A233D;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contenidoPrincipal__cartelera .peliculaDos {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenidoPrincipal__cartelera .peliculaDos h2 {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 30px;
+  background-color: #0A233D;
+}
+
+.contenidoPrincipal__cartelera .peliculaDos img {
+  margin-top: 20px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.contenidoPrincipal__cartelera .peliculaDos p {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.contenidoPrincipal__cartelera .peliculaDos__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0A233D;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contenidoPrincipal__cartelera .peliculaTres {
+  text-align: center;
+}
+
+.contenidoPrincipal__cartelera .peliculaTres h2 {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 30px;
+  background-color: #0A233D;
+}
+
+.contenidoPrincipal__cartelera .peliculaTres img {
+  margin-top: 20px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.contenidoPrincipal__cartelera .peliculaTres p {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.contenidoPrincipal__cartelera .peliculaTres__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0A233D;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contenidoPrincipal__cartelera .peliculaCuatro {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenidoPrincipal__cartelera .peliculaCuatro h2 {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 30px;
+  background-color: #0A233D;
+}
+
+.contenidoPrincipal__cartelera .peliculaCuatro img {
+  margin-top: 20px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.contenidoPrincipal__cartelera .peliculaCuatro p {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.contenidoPrincipal__cartelera .peliculaCuatro__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0A233D;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contenidoPrincipal__cartelera .peliculaCinco {
+  text-align: center;
+}
+
+.contenidoPrincipal__cartelera .peliculaCinco h2 {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 30px;
+  background-color: #0A233D;
+}
+
+.contenidoPrincipal__cartelera .peliculaCinco img {
+  margin-top: 20px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.contenidoPrincipal__cartelera .peliculaCinco p {
+  font-family: "Oswald", sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.contenidoPrincipal__cartelera .videoCinco__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=estilos.css.map */

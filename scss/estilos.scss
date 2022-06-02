@@ -1,0 +1,339 @@
+    /**-----------------------Generales-------------------------------------------------------------**/
+    
+    @import "main";
+    @import "fuentes";
+    @import "variables";
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: #363736;
+    }
+    
+    @mixin alineacion-al-centro {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    /**-----------------------Header-------------------------------------------------------------**/
+    
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100px;
+        width: 100%;
+        background-image: linear-gradient(#032C55, black);
+        align-items: center;
+        @media all and (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            nav {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        img {
+            height: 70px;
+            padding-left: 20px;
+        }
+        a {
+            @extend .titulo;
+            text-decoration: none;
+            padding-left: 10px;
+            &:hover {
+                color: blue;
+            }
+        }
+        nav {
+            padding-right: 20px;
+        }
+    }
+    /**-----------------------Index.html-----------------------------------------------------------
+
+----------------------------------------------------------------------------------------------**/
+    
+    .contenedorPortada {
+        height: 500px;
+        width: 100%;
+        background-image: url(../imagenes/portada.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.8);
+        @media (min-width: 300px) and (max-width: 600px) {
+            background-image: url(../imagenes/portadaMobile.jpg);
+            height: 200px;
+            background-size: contain;
+        }
+    }
+    
+    .contenedorEstrenos {
+        height: 120px;
+        width: 100%;
+        background-image: linear-gradient( #032C55, black);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        h2 {
+            padding-left: 10px;
+            @media (min-width: 300px) and (max-width: 600px) {
+                text-align: center;
+            }
+        }
+    }
+    
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @media (min-width: 300px) and (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+        }
+        .galeria__imagen {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-right: 20px;
+            img {
+                height: 400px;
+                width: 100%;
+            }
+            p {
+                text-align: center;
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+    .contenedorInferior {
+        height: 100px;
+        background-image: linear-gradient( #0f1216, rgb(31, 28, 28));
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        @media all and (max-width: 780px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        a {
+            font-size: 18px;
+            padding: 4px;
+            background-color: #0e2c4b;
+            border-radius: .5rem;
+            text-decoration: none;
+            margin-right: 5px;
+            &:hover {
+                background-color: #133c64;
+            }
+        }
+    }
+    
+    .imagenesInferiores {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        @media (min-width: 300px) and (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+        }
+        img {
+            height: 300px;
+            width: 80%;
+            @media (min-width: 300px) and (max-width: 600px) {
+                height: 150px;
+                width: 100%;
+            }
+        }
+        p {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            @media (min-width: 300px) and (max-width: 600px) {
+                font-size: 1.2rem;
+            }
+        }
+        .mensaje {
+            text-align: center;
+            font-size: 1.3rem;
+        }
+    }
+    
+    .linea {
+        @media (min-width: 300px) and (max-width: 600px) {
+            height: 1px;
+            width: 100%;
+            background-color: #032C55;
+        }
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        justify-content: center;
+        padding-top: 16px;
+        background-image: linear-gradient( #0f1216, rgb(31, 28, 28));
+        @media all and (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            nav {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        a {
+            text-decoration: none;
+            padding-left: 10px;
+            &:hover {
+                color: blue;
+            }
+        }
+    }
+    
+    .iconos {
+        @include alineacion-al-centro;
+    }
+    /**-----------------------Cartelera.html-----------------------------------------------------------
+
+----------------------------------------------------------------------------------------------**/
+    
+    .contenidoPrincipal__cartelera {
+        .tituloCartelera {
+            height: 100px;
+            margin-top: 50px;
+            background-image: linear-gradient( #032C55, black);
+            margin-bottom: 50px;
+            h1 {
+                padding-top: 20px;
+                padding-left: 15px;
+            }
+        }
+        .peliculaUno {
+            text-align: center;
+            h2 {
+                font-size: 30px;
+                background-color: #0A233D;
+            }
+            img {
+                margin-top: 20px;
+                height: 400px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .peliculaUno__footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #0A233D;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        .peliculaDos {
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+            h2 {
+                font-size: 30px;
+                background-color: #0A233D;
+            }
+            img {
+                margin-top: 20px;
+                height: 400px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .peliculaDos__footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #0A233D;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        .peliculaTres {
+            text-align: center;
+            h2 {
+                font-size: 30px;
+                background-color: #0A233D;
+            }
+            img {
+                margin-top: 20px;
+                height: 400px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .peliculaTres__footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #0A233D;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        .peliculaCuatro {
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+            h2 {
+                font-size: 30px;
+                background-color: #0A233D;
+            }
+            img {
+                margin-top: 20px;
+                height: 400px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .peliculaCuatro__footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #0A233D;
+            margin-top: 10px;
+            margin-bottom: 50px;
+        }
+        .peliculaCinco {
+            text-align: center;
+            h2 {
+                font-size: 30px;
+                background-color: #0A233D;
+            }
+            img {
+                margin-top: 20px;
+                height: 400px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .videoCinco__footer {
+            display: flex;
+            flex-direction: column;
+        }
+    }
